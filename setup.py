@@ -69,7 +69,7 @@ file for reference
 
 setup(
     name='hostscli',
-    version='0.0.6',
+    version='0.0.7',
     description=(
         "hostscli is a CLI tool to block / unblock websites using /etc/hosts"),
     long_description=long_description,
