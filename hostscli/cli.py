@@ -12,25 +12,33 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2016-12-28
 """
 
+from os import listdir
 from fileinput import FileInput
 from importlib import import_module
 from click import echo, group, argument
 
 HOSTS_FILE = '/etc/hosts'
 FORMAT = '127.0.0.1 %s\n'
+WEBSITES_PACKAGE = 'hostscli.websites'
 
 ERROR_MESSAGE = """
+
+
 No Domain list found for website: %s
 
-Please raise a Issue here: https://github.com/dhilipsiva/hostscli/issues/new \
+Please raise a Issue here: https://github.com/dhilipsiva/hostscli/issues/new
 if you think we should add domains for this website.
+
+type `hostscli websites` to see a list of websites that you can block/unblock
+
+
 """
 
 
 def _get_lines(website):
     website = website.lower()
     try:
-        module = import_module('hostscli.websites.%s' % website)
+        module = import_module('%s.%s' % (WEBSITES_PACKAGE, website))
         return [FORMAT % domain for domain in module.DOMAINS]
     except ImportError:
         raise Exception(ERROR_MESSAGE % website)
@@ -39,6 +47,18 @@ def _get_lines(website):
 @group()
 def cli():
     pass
+
+
+@cli.command()
+def websites():
+    websites_path = import_module(WEBSITES_PACKAGE)
+    websites_path = websites_path.__file__.replace("__init__.py", "")
+    files = listdir(websites_path)
+    files.remove('__pycache__')
+    files.remove('__init__.py')
+    print("Available Websites: \n")
+    for f in files:
+        print(f[:-3])
 
 
 @cli.command()
