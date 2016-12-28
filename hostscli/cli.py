@@ -12,6 +12,8 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2016-12-28
 """
 
+from __future__ import print_function
+
 from os import listdir, getuid
 from fileinput import FileInput
 from importlib import import_module
