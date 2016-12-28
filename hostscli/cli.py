@@ -15,7 +15,6 @@ Date created: 2016-12-28
 from __future__ import print_function
 
 from os import listdir, getuid
-from fileinput import FileInput
 from importlib import import_module
 from click import echo, group, argument
 
@@ -92,8 +91,9 @@ def block(website):
 def unblock(website):
     _check_root()
     target_lines = _get_lines(website)
-    with FileInput(HOSTS_FILE, inplace=True, backup='.bak') as hosts_file:
-        for line in hosts_file:
-            if line not in target_lines:
-                print(line, end='')
+    input_lines = open(HOSTS_FILE, "r").readlines()
+    with open(HOSTS_FILE, "w") as hosts_file:
+        for input_line in input_lines:
+            if input_line not in target_lines:
+                hosts_file.write(input_line)
     echo('%s unblocked!' % website)
