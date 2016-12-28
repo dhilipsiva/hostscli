@@ -20,7 +20,7 @@ f = path.join(here, 'README.md')
 
 setup(
     name='hostscli',
-    version='0.0.2',
+    version='0.0.3',
     description=(
         "hostscli is a CLI tool to block / unblock websites using /etc/hosts"),
     url='https://github.com/dhilipsiva/hostscli',
