@@ -21,7 +21,7 @@ sudo hostscli block facebook
 To unblock `facebook`:
 
 ```
-sudo hostscli block facebook
+sudo hostscli unblock facebook
 ```
 
 To list supported websites:
