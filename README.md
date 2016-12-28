@@ -33,4 +33,4 @@ hostscli websites
 ## More websites?
 
 If you need to add more websites, just create a `<website>.py` file in `hostscli/websites/` directory with list of domains declared as variable `DOMAINS`.
-Please look at `hostscli/websites/facebook.py` file for reference
+Please look at [`hostscli/websites/facebook.py`](https://github.com/dhilipsiva/hostscli/blob/master/hostscli/websites/facebook.py) file for reference
