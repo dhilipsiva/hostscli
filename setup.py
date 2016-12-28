@@ -48,6 +48,11 @@ setup(
     keywords='hostscli hosts /etc/hosts block unblock websites',
     packages=find_packages(),
     py_modules=['hostscli'],
-    entry_points='',
-    install_requires=[],
+    install_requires=[
+        'Click',
+    ],
+    entry_points='''
+        [console_scripts]
+        hostscli=hostscli.cli:cli
+    ''',
 )
