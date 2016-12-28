@@ -12,7 +12,7 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2016-12-28
 """
 
-from os import listdir
+from os import listdir, getuid
 from fileinput import FileInput
 from importlib import import_module
 from click import echo, group, argument
@@ -21,7 +21,7 @@ HOSTS_FILE = '/etc/hosts'
 FORMAT = '127.0.0.1 %s\n'
 WEBSITES_PACKAGE = 'hostscli.websites'
 
-ERROR_MESSAGE = """
+IMPORT_ERROR = """
 
 
 No Domain list found for website: %s
@@ -34,6 +34,14 @@ type `hostscli websites` to see a list of websites that you can block/unblock
 
 """
 
+ROOT_ERROR = """
+
+"sudo" permissions are required to run this command.
+
+Please run the last command again with sudo
+
+"""
+
 
 def _get_lines(website):
     website = website.lower()
@@ -41,7 +49,12 @@ def _get_lines(website):
         module = import_module('%s.%s' % (WEBSITES_PACKAGE, website))
         return [FORMAT % domain for domain in module.DOMAINS]
     except ImportError:
-        raise Exception(ERROR_MESSAGE % website)
+        raise Exception(IMPORT_ERROR % website)
+
+
+def _check_root():
+    if getuid() != 0:
+        raise Exception(ROOT_ERROR)
 
 
 @group()
@@ -64,6 +77,7 @@ def websites():
 @cli.command()
 @argument('website')
 def block(website):
+    _check_root()
     target_lines = _get_lines(website)
     with open(HOSTS_FILE, 'a') as hosts_file:
         for target_line in target_lines:
@@ -74,6 +88,7 @@ def block(website):
 @cli.command()
 @argument('website')
 def unblock(website):
+    _check_root()
     target_lines = _get_lines(website)
     with FileInput(HOSTS_FILE, inplace=True, backup='.bak') as hosts_file:
         for line in hosts_file:
