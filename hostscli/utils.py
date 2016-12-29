@@ -16,6 +16,7 @@ from click import echo
 from os import listdir, getuid
 from importlib import import_module
 
+from hostscli.errors import WebsiteImportError, SudoRequiredError
 from hostscli.constants import HOSTS_FILE, FORMAT, WEBSITES_PACKAGE, \
     IMPORT_ERROR, ROOT_ERROR
 
@@ -26,12 +27,12 @@ def get_lines(website):
         module = import_module('%s.%s' % (WEBSITES_PACKAGE, website))
         return [FORMAT % domain for domain in module.DOMAINS]
     except ImportError:
-        raise Exception(IMPORT_ERROR % website)
+        raise WebsiteImportError(IMPORT_ERROR % website)
 
 
 def check_root():
     if getuid() != 0:
-        raise Exception(ROOT_ERROR)
+        raise SudoRequiredError(ROOT_ERROR)
 
 
 def get_websites():

@@ -18,7 +18,6 @@ WEBSITES_PACKAGE = 'hostscli.websites'
 
 IMPORT_ERROR = """
 
-
 No Domain list found for website: %s
 
 Please raise a Issue here: https://github.com/dhilipsiva/hostscli/issues/new
