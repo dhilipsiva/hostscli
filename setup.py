@@ -106,4 +106,8 @@ setup(
         [console_scripts]
         hostscli=hostscli.cli:cli
     ''',
+    extras_require={
+        'dev': [],
+        'test': ['pytest'],
+    },
 )
