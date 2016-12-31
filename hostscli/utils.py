@@ -13,6 +13,7 @@ Date created: 2016-12-29
 """
 
 from click import echo
+from functools import wraps
 from os import listdir, getuid
 from importlib import import_module
 
@@ -21,18 +22,13 @@ from hostscli.constants import HOSTS_FILE, FORMAT, WEBSITES_PACKAGE, \
     IMPORT_ERROR, ROOT_ERROR
 
 
-def get_lines(website):
-    website = website.lower()
-    try:
-        module = import_module('%s.%s' % (WEBSITES_PACKAGE, website))
-        return [FORMAT % domain for domain in module.DOMAINS]
-    except ImportError:
-        raise WebsiteImportError(IMPORT_ERROR % website)
-
-
-def check_root():
-    if getuid() != 0:
-        raise SudoRequiredError(ROOT_ERROR)
+def sudo_required(f):
+    @wraps(f)
+    def wrapper(website):
+        if getuid() != 0:
+            raise SudoRequiredError(ROOT_ERROR)
+        return f(website)
+    return wrapper
 
 
 def get_websites():
@@ -44,6 +40,16 @@ def get_websites():
     return [website[:-3] for website in websites]
 
 
+def get_lines(website):
+    website = website.lower()
+    try:
+        module = import_module('%s.%s' % (WEBSITES_PACKAGE, website))
+        return [FORMAT % domain for domain in module.DOMAINS]
+    except ImportError:
+        raise WebsiteImportError(IMPORT_ERROR % website)
+
+
+@sudo_required
 def block(website):
     target_lines = get_lines(website)
     with open(HOSTS_FILE, 'a') as hosts_file:
@@ -52,6 +58,7 @@ def block(website):
     echo('Blocked %s!' % website)
 
 
+@sudo_required
 def unblock(website):
     target_lines = get_lines(website)
     input_lines = open(HOSTS_FILE, "r").readlines()

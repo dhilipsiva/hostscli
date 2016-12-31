@@ -14,8 +14,7 @@ Date created: 2016-12-28
 
 from click import echo, group, argument, option
 
-from hostscli.utils import check_root, get_websites, \
-    block as _block, unblock as _unblock
+from hostscli.utils import get_websites, block as _block, unblock as _unblock
 
 
 @group()
@@ -50,7 +49,6 @@ def block(websites):
     To block facebook & youtube:
     $ hostscli block facebook,youtube
     """
-    check_root()
     for website in websites.split(","):
         _block(website)
 
@@ -69,7 +67,6 @@ def unblock(websites):
     To unblock facebook & youtube:
     $ hostscli unblock facebook,youtube
     """
-    check_root()
     for website in websites.split(","):
         _unblock(website)
 
@@ -87,7 +84,6 @@ def block_all(ignore):
     use `--ignore` ot `-i` to ignore websites.
     $ hostscli block_all -i facebook,google
     """
-    check_root()
     websites = get_websites()
     ignore_websites = ignore.split(",")
     for website in websites:
@@ -108,7 +104,6 @@ def unblock_all(ignore):
     use `--ignore` ot `-i` to ignore websites.
     $ hostscli unblock_all -i facebook,google
     """
-    check_root()
     websites = get_websites()
     ignore_websites = ignore.split(",")
     for website in websites:

@@ -15,9 +15,10 @@ Date created: 2016-12-29
 from click.testing import CliRunner
 from hostscli.cli import websites
 
+runner = CliRunner()
+
 
 def test_hostscli():
-    runner = CliRunner()
     result = runner.invoke(websites)
     print(result.output)
     print(dir(result))
