@@ -12,9 +12,11 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2016-12-29
 """
 
-HOSTS_FILE = '/etc/hosts'
+from os import environ
+
 FORMAT = '127.0.0.1 %s\n'
 WEBSITES_PACKAGE = 'hostscli.websites'
+HOSTS_FILE = environ.get('HOSTS_FILE', '/etc/hosts')
 
 IMPORT_ERROR = """
 
