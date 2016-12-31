@@ -72,8 +72,7 @@ def unblock(websites):
 
 
 @cli.command()
-@option(
-    '--ignore', '-i', default="", help='Ignore a websites while blocking')
+@option('--ignore', '-i', default="", help='Ignore websites while blocking')
 def block_all(ignore):
     """
     \b
@@ -92,8 +91,7 @@ def block_all(ignore):
 
 
 @cli.command()
-@option(
-    '--ignore', '-i', default="", help='Ignore a websites while unblocking')
+@option('--ignore', '-i', default="", help='Ignore websites while unblocking')
 def unblock_all(ignore):
     """
     \b
