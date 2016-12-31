@@ -14,8 +14,8 @@ Date created: 2016-12-29
 
 from click import echo
 from functools import wraps
-from os import listdir, getuid
 from importlib import import_module
+from os import listdir, access, W_OK
 
 from hostscli.errors import WebsiteImportError, SudoRequiredError
 from hostscli.constants import HOSTS_FILE, FORMAT, WEBSITES_PACKAGE, \
@@ -25,7 +25,7 @@ from hostscli.constants import HOSTS_FILE, FORMAT, WEBSITES_PACKAGE, \
 def sudo_required(f):
     @wraps(f)
     def wrapper(website):
-        if getuid() != 0:
+        if not access(HOSTS_FILE, W_OK):
             raise SudoRequiredError(ROOT_ERROR)
         return f(website)
     return wrapper
