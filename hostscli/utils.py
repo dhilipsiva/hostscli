@@ -12,7 +12,6 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2016-12-29
 """
 
-from click import echo
 from functools import wraps
 from importlib import import_module
 from os import listdir, access, W_OK
@@ -55,7 +54,7 @@ def block(website):
     with open(HOSTS_FILE, 'a') as hosts_file:
         for target_line in target_lines:
             hosts_file.write(target_line)
-    echo('Blocked %s!' % website)
+    return target_line
 
 
 @sudo_required
@@ -66,4 +65,4 @@ def unblock(website):
         for input_line in input_lines:
             if input_line not in target_lines:
                 hosts_file.write(input_line)
-    echo('%s unblocked!' % website)
+    return target_lines

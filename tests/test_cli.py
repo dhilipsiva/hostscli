@@ -20,9 +20,8 @@ runner = CliRunner()
 
 def test_hostscli():
     result = runner.invoke(websites)
-    print(result.output)
-    print(dir(result))
-    assert 1 == 0
+    assert 'Available Websites:' in result.output
+    assert 'test' in result.output
     assert result.exit_code == 0
 
 

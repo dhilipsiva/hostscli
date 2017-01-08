@@ -51,6 +51,7 @@ def block(websites):
     """
     for website in websites.split(","):
         _block(website)
+        echo('Blocked %s!' % website)
 
 
 @cli.command()
@@ -69,6 +70,7 @@ def unblock(websites):
     """
     for website in websites.split(","):
         _unblock(website)
+        echo('%s unblocked!' % website)
 
 
 @cli.command()
