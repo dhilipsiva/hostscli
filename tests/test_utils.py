@@ -12,12 +12,10 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2017-01-08
 """
 
-from hostscli.errors import WebsiteImportError
 from hostscli.constants import HOSTS_FILE
+from hostscli.errors import WebsiteImportError
+from hostscli.constants import TEST_WEBSITE, TEST_LINE
 from hostscli.utils import get_websites, get_lines, block, unblock
-
-TEST_WEBSITE = 'test'
-TEST_LINE = '127.0.0.1 test.com\n'
 
 
 def test_get_websites():

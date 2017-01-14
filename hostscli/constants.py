@@ -40,3 +40,9 @@ ROOT_ERROR = """
 Please run the last command again with sudo
 
 """
+
+
+# TEST CONSTANTS
+
+TEST_WEBSITE = 'test'
+TEST_LINE = '127.0.0.1 test.com\n'
