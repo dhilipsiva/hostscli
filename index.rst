@@ -6,6 +6,9 @@
 Welcome to HostsCLI's documentation!
 ====================================
 
+.. image:: https://readthedocs.org/projects/hostscli/badge/?version=latest
+    :target: http://hostscli.readthedocs.io/?badge=latest
+    :alt: Documentation Status
 .. image:: https://travis-ci.org/dhilipsiva/hostscli.svg?branch=master
     :target: https://travis-ci.org/dhilipsiva/hostscli
 .. image:: https://codecov.io/gh/dhilipsiva/hostscli/branch/master/graph/badge.svg
