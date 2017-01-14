@@ -13,13 +13,13 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily
 .. list-table::
     :stub-columns: 1
 
-    * - docs
+    * - Docs
       - |docs|
-    * - github
+    * - GitHub
       - | |gh-issues| |gh-forks| |gh-stars| |gh-license|
-    * - tests
+    * - Tests
       - | |travis| |requires|  |coverage| |code-climate| |cc-coverage| |cc-issues|
-    * - thanks
+    * - Thanks
       - |say-thanks|
 
 .. |docs| image:: https://readthedocs.org/projects/hostscli/badge/?version=latest
