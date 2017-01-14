@@ -12,6 +12,7 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2017-01-08
 """
 
+from hostscli.errors import WebsiteImportError
 from hostscli.constants import HOSTS_FILE
 from hostscli.utils import get_websites, get_lines, block, unblock
 
@@ -33,6 +34,15 @@ def test_get_lines():
     """
     lines = get_lines(TEST_WEBSITE)
     assert TEST_LINE in lines
+
+
+def test_get_lines_throws_exception():
+    try:
+        get_lines('a_website_that_does_not_exist')
+    except WebsiteImportError:
+        assert True
+        return
+    assert False
 
 
 def test_block_unblock():
