@@ -17,7 +17,6 @@ from os import environ
 FORMAT = '127.0.0.1 %s\n'
 WEBSITES_PACKAGE = 'hostscli.websites'
 HOSTS_FILE = environ.get('HOSTS_FILE', '/etc/hosts')
-print(HOSTS_FILE * 40)
 
 IMPORT_ERROR = """
 
