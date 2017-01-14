@@ -15,48 +15,48 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily
 
     * - docs
       - |docs|
+    * - github
+      - | |gh-issues| |gh-forks| |gh-stars| |gh-license|
     * - tests
-      - | |travis| |appveyor| |requires|
-    * - package
-      - |version| |downloads| |wheel| |supported-versions| |supported-implementations|
+      - | |travis| |requires|  |coverage| |code-climate| |cc-coverage| |cc-issues|
+    * - thanks
+      - |say-thanks|
 
-.. |docs| image:: https://readthedocs.org/projects/pytest-cov/badge/?style=flat
-    :target: https://readthedocs.org/projects/pytest-cov
-    :alt: Documentation Status
-.. image:: https://readthedocs.org/projects/hostscli/badge/?version=latest
+.. |docs| image:: https://readthedocs.org/projects/hostscli/badge/?version=latest
     :target: http://hostscli.readthedocs.io/?badge=latest
     :alt: Documentation Status
-.. image:: https://travis-ci.org/dhilipsiva/hostscli.svg?branch=master
-    :target: https://travis-ci.org/dhilipsiva/hostscli
-.. image:: https://codecov.io/gh/dhilipsiva/hostscli/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/dhilipsiva/hostscli
-.. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/gpa.svg
-    :target: https://codeclimate.com/github/dhilipsiva/hostscli
-    :alt: Code Climate
-.. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/coverage.svg
-    :target: https://codeclimate.com/github/dhilipsiva/hostscli/coverage
-    :alt: Test Coverage
-.. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/issue_count.svg
-    :target: https://codeclimate.com/github/dhilipsiva/hostscli
-    :alt: Issue Count
-.. image:: https://requires.io/github/dhilipsiva/hostscli/requirements.svg?branch=master
-    :target: https://requires.io/github/dhilipsiva/hostscli/requirements/?branch=master
-    :alt: Requirements Status
-.. image:: https://img.shields.io/github/issues/dhilipsiva/hostscli.svg
+.. |gh-issues| image:: https://img.shields.io/github/issues/dhilipsiva/hostscli.svg
     :target: https://github.com/dhilipsiva/hostscli/issues
     :alt: GitHub Issues
-.. image:: https://img.shields.io/github/forks/dhilipsiva/hostscli.svg
+.. |gh-forks| image:: https://img.shields.io/github/forks/dhilipsiva/hostscli.svg
     :target: https://github.com/dhilipsiva/hostscli/network
     :alt: GitHub Forks
-.. image:: https://img.shields.io/github/stars/dhilipsiva/hostscli.svg
+.. |gh-stars| image:: https://img.shields.io/github/stars/dhilipsiva/hostscli.svg
     :target: https://github.com/dhilipsiva/hostscli/stargazers
     :alt: GitHub Stars
-.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+.. |gh-license| image:: https://img.shields.io/badge/license-MIT-blue.svg
     :target: https://raw.githubusercontent.com/dhilipsiva/hostscli/master/LICENSE
     :alt: GitHub LICENSE
-.. image:: https://img.shields.io/badge/saythanks.io-%E2%98%BC-1EAEDB.svg
+.. |travis| image:: https://travis-ci.org/dhilipsiva/hostscli.svg?branch=master
+    :target: https://travis-ci.org/dhilipsiva/hostscli
+.. |requires| image:: https://requires.io/github/dhilipsiva/hostscli/requirements.svg?branch=master
+    :target: https://requires.io/github/dhilipsiva/hostscli/requirements/?branch=master
+    :alt: Requirements Status
+.. |coverage| image:: https://codecov.io/gh/dhilipsiva/hostscli/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/dhilipsiva/hostscli
+.. |code-climate| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/gpa.svg
+    :target: https://codeclimate.com/github/dhilipsiva/hostscli
+    :alt: Code Climate
+.. |cc-coverage| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/coverage.svg
+    :target: https://codeclimate.com/github/dhilipsiva/hostscli/coverage
+    :alt: Test Coverage
+.. |cc-issues| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/issue_count.svg
+    :target: https://codeclimate.com/github/dhilipsiva/hostscli
+    :alt: Issue Count
+.. |say-thanks| image:: https://img.shields.io/badge/saythanks.io-%E2%98%BC-1EAEDB.svg
     :target: https://saythanks.io/to/dhilipsiva
     :alt: Say thanks :)
+
 .. end-badges
 
 
