@@ -8,6 +8,10 @@ Welcome to HostsCLI's documentation!
 
 A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily extendable.
 
+
+Links
+-----
+
 .. list-table::
     :stub-columns: 1
 
@@ -18,6 +22,9 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily
     * - PyPI Link
       - https://pypi.python.org/pypi/hostscli
 
+
+Badges
+------
 
 .. start-badges
 
