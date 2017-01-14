@@ -19,7 +19,9 @@ Welcome to HostsCLI's documentation!
 .. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/issue_count.svg
     :target: https://codeclimate.com/github/dhilipsiva/hostscli
     :alt: Issue Count
-
+.. image:: https://requires.io/github/dhilipsiva/hostscli/requirements.svg?branch=master
+    :target: https://requires.io/github/dhilipsiva/hostscli/requirements/?branch=master
+    :alt: Requirements Status
 
 .. toctree::
    :maxdepth: 2
