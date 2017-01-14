@@ -8,6 +8,17 @@ Welcome to HostsCLI's documentation!
 
 A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily extendable.
 
+.. list-table::
+    :stub-columns: 1
+
+    * - Docs Link
+      - http://hostscli.readthedocs.io/
+    * - GitHub Link
+      - https://github.com/dhilipsiva/hostscli
+    * - PyPI Link
+      - https://pypi.python.org/pypi/hostscli
+
+
 .. start-badges
 
 .. list-table::
@@ -85,7 +96,6 @@ Indices and tables
 Installation
 ============
 
-
     pip install -U hostscli
 
 
@@ -117,6 +127,7 @@ To Unblock all supported websites:
 
 ``sudo hostscli unblock_all
 sudo hostscli unblock_all -i facebook,youtube  # To ignore some sites when unblocking``
+
 
 More websites?
 =============
