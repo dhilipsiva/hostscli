@@ -12,23 +12,34 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2017-01-08
 """
 
+from hostscli.constants import HOSTS_FILE
+from hostscli.utils import get_websites, get_lines, block, unblock
 
-from hostscli.utils import sudo_required
-from hostscli.errors import SudoRequiredError
+TEST_WEBSITE = 'test'
+TEST_LINE = '127.0.0.1 test.com\n'
 
 
-def test_sudo_required():
+def test_get_websites():
     """
-    Test Sudo required
+    Test listing supported websites
     """
+    websites = get_websites()
+    assert TEST_WEBSITE in websites
 
-    @sudo_required
-    def dummy_fuction():
-        assert True
 
-    try:
-        dummy_fuction('test')
-    except SudoRequiredError:
-        assert True
-    else:
-        assert False
+def test_get_lines():
+    """
+    Test if its getting domains from file
+    """
+    lines = get_lines(TEST_WEBSITE)
+    assert TEST_LINE in lines
+
+
+def test_block_unblock():
+    """
+    Test blocking and unblocking websites
+    """
+    block(TEST_WEBSITE)
+    assert TEST_LINE in open(HOSTS_FILE).read()
+    unblock(TEST_WEBSITE)
+    assert TEST_LINE not in open(HOSTS_FILE).read()
