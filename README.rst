@@ -96,25 +96,30 @@ Usage
 
 To block ``facebook``:
 
+.. highlight:: bash
     sudo hostscli block facebook
     sudo hostscli block facebook,youtube  # To block multiple sites
 
 To unblock ``facebook``:
 
+.. highlight:: bash
     sudo hostscli unblock facebook
     sudo hostscli unblock facebook,youtube  # To unblock multiple sites
 
 To list supported websites:
 
+.. highlight:: bash
     hostscli websites
 
 To Block all supported websites:
 
+.. highlight:: bash
     sudo hostscli block_all
     sudo hostscli block_all -i facebook,youtube  # To ignore some sites when blocking
 
 To Unblock all supported websites:
 
+.. highlight:: bash
     sudo hostscli unblock_all
     sudo hostscli unblock_all -i facebook,youtube  # To ignore some sites when unblocking
 
