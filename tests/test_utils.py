@@ -35,6 +35,9 @@ def test_get_lines():
 
 
 def test_get_lines_throws_exception():
+    """
+    get_lines should throw an exception when a website is not found
+    """
     try:
         get_lines('a_website_that_does_not_exist')
     except WebsiteImportError:
