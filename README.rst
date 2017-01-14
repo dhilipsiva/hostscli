@@ -121,5 +121,5 @@ To Unblock all supported websites:
 More websites?
 =============
 
-If you need to add more websites, just create a ``<website>.py`` file in `hostscli/websites/<https://github.com/dhilipsiva/hostscli/tree/master/hostscli/websites>`_ directory with list of domains declared as variable `DOMAINS`.
+If you need to add more websites, just create a ``<website>.py`` file in `hostscli/websites/ <https://github.com/dhilipsiva/hostscli/tree/master/hostscli/websites>`_ directory with list of domains declared as variable `DOMAINS`.
 Please look at `hostscli/websites/facebook.py <https://github.com/dhilipsiva/hostscli/blob/master/hostscli/websites/facebook.py>`_ file for reference
