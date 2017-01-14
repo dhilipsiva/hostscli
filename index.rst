@@ -6,6 +6,20 @@
 Welcome to HostsCLI's documentation!
 ====================================
 
+.. image:: https://codecov.io/gh/dhilipsiva/hostscli/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/dhilipsiva/hostscli
+
+.. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/gpa.svg
+    :target: https://codeclimate.com/github/dhilipsiva/hostscli
+    :alt: Code Climate
+.. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/coverage.svg
+    :target: https://codeclimate.com/github/dhilipsiva/hostscli/coverage
+    :alt: Test Coverage
+.. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/issue_count.svg
+    :target: https://codeclimate.com/github/dhilipsiva/hostscli
+    :alt: Issue Count
+
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

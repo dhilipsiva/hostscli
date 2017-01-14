@@ -2,6 +2,12 @@
 
 A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily extendable.
 
+[![codecov](https://codecov.io/gh/dhilipsiva/hostscli/branch/master/graph/badge.svg)](https://codecov.io/gh/dhilipsiva/hostscli)
+[![Code Climate](https://codeclimate.com/github/dhilipsiva/hostscli/badges/gpa.svg)](https://codeclimate.com/github/dhilipsiva/hostscli)
+[![Test Coverage](https://codeclimate.com/github/dhilipsiva/hostscli/badges/coverage.svg)](https://codeclimate.com/github/dhilipsiva/hostscli/coverage)
+[![Issue Count](https://codeclimate.com/github/dhilipsiva/hostscli/badges/issue_count.svg)](https://codeclimate.com/github/dhilipsiva/hostscli)
+
+
 ## Installation
 
 ```
