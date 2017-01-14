@@ -22,6 +22,19 @@ Welcome to HostsCLI's documentation!
 .. image:: https://requires.io/github/dhilipsiva/hostscli/requirements.svg?branch=master
     :target: https://requires.io/github/dhilipsiva/hostscli/requirements/?branch=master
     :alt: Requirements Status
+.. image:: https://img.shields.io/github/issues/dhilipsiva/hostscli.svg
+    :target: https://github.com/dhilipsiva/hostscli/issues
+    :alt: GitHub Issues
+.. image:: https://img.shields.io/github/forks/dhilipsiva/hostscli.svg
+    :target: https://github.com/dhilipsiva/hostscli/network
+    :alt: GitHub Forks
+.. image:: https://img.shields.io/github/stars/dhilipsiva/hostscli.svg
+    :target: https://github.com/dhilipsiva/hostscli/stargazers
+    :alt: GitHub Stars
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://raw.githubusercontent.com/dhilipsiva/hostscli/master/LICENSE
+    :alt: GitHub LICENSE
+
 
 .. toctree::
    :maxdepth: 2
