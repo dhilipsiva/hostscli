@@ -6,9 +6,10 @@
 Welcome to HostsCLI's documentation!
 ====================================
 
+.. image:: https://travis-ci.org/dhilipsiva/hostscli.svg?branch=master
+    :target: https://travis-ci.org/dhilipsiva/hostscli
 .. image:: https://codecov.io/gh/dhilipsiva/hostscli/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/dhilipsiva/hostscli
-
 .. image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/gpa.svg
     :target: https://codeclimate.com/github/dhilipsiva/hostscli
     :alt: Code Climate
