@@ -37,6 +37,9 @@ Welcome to HostsCLI's documentation!
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :target: https://raw.githubusercontent.com/dhilipsiva/hostscli/master/LICENSE
     :alt: GitHub LICENSE
+.. image:: https://img.shields.io/badge/saythanks.io-%E2%98%BC-1EAEDB.svg
+    :target: https://saythanks.io/to/dhilipsiva
+    :alt: Say thanks :)
 
 
 .. toctree::

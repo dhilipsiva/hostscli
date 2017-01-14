@@ -13,6 +13,7 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily
 [![GitHub forks](https://img.shields.io/github/forks/dhilipsiva/hostscli.svg)](https://github.com/dhilipsiva/hostscli/network)
 [![GitHub stars](https://img.shields.io/github/stars/dhilipsiva/hostscli.svg)](https://github.com/dhilipsiva/hostscli/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dhilipsiva/hostscli/master/LICENSE)
+[![Say Thanks](https://img.shields.io/badge/saythanks.io-%E2%98%BC-1EAEDB.svg)](https://saythanks.io/to/dhilipsiva)
 
 ## Installation
 
