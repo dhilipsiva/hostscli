@@ -7,7 +7,3 @@ install:
 script: tox
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - codeclimate-test-reporter
-addons:
-    code_climate:
-        repo_token: {{CODECLIMATE_REPO_TOKEN}}

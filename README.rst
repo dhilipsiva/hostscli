@@ -18,7 +18,7 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily
     * - GitHub
       - | |gh-issues| |gh-forks| |gh-stars| |gh-license|
     * - Tests
-      - | |travis| |requires|  |coverage| |code-climate| |cc-coverage| |cc-issues|
+      - | |travis| |requires|  |coverage| |code-climate| |cc-issues|
     * - Thanks
       - |say-thanks|
 
@@ -47,9 +47,6 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily
 .. |code-climate| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/gpa.svg
     :target: https://codeclimate.com/github/dhilipsiva/hostscli
     :alt: Code Climate
-.. |cc-coverage| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/coverage.svg
-    :target: https://codeclimate.com/github/dhilipsiva/hostscli/coverage
-    :alt: Test Coverage
 .. |cc-issues| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/issue_count.svg
     :target: https://codeclimate.com/github/dhilipsiva/hostscli
     :alt: Issue Count
