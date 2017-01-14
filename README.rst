@@ -25,38 +25,48 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily
 .. |docs| image:: https://readthedocs.org/projects/hostscli/badge/?version=latest
     :target: http://hostscli.readthedocs.io/?badge=latest
     :alt: Documentation Status
+
 .. |gh-issues| image:: https://img.shields.io/github/issues/dhilipsiva/hostscli.svg
     :target: https://github.com/dhilipsiva/hostscli/issues
     :alt: GitHub Issues
+
 .. |gh-forks| image:: https://img.shields.io/github/forks/dhilipsiva/hostscli.svg
     :target: https://github.com/dhilipsiva/hostscli/network
     :alt: GitHub Forks
+
 .. |gh-stars| image:: https://img.shields.io/github/stars/dhilipsiva/hostscli.svg
     :target: https://github.com/dhilipsiva/hostscli/stargazers
     :alt: GitHub Stars
+
 .. |gh-license| image:: https://img.shields.io/badge/license-MIT-blue.svg
     :target: https://raw.githubusercontent.com/dhilipsiva/hostscli/master/LICENSE
     :alt: GitHub LICENSE
+
 .. |travis| image:: https://travis-ci.org/dhilipsiva/hostscli.svg?branch=master
     :target: https://travis-ci.org/dhilipsiva/hostscli
+    :alt: Travis
+
 .. |requires| image:: https://requires.io/github/dhilipsiva/hostscli/requirements.svg?branch=master
     :target: https://requires.io/github/dhilipsiva/hostscli/requirements/?branch=master
     :alt: Requirements Status
+
 .. |coverage| image:: https://codecov.io/gh/dhilipsiva/hostscli/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/dhilipsiva/hostscli
+    :alt: Coverage
+
 .. |code-climate| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/gpa.svg
     :target: https://codeclimate.com/github/dhilipsiva/hostscli
     :alt: Code Climate
+
 .. |cc-issues| image:: https://codeclimate.com/github/dhilipsiva/hostscli/badges/issue_count.svg
     :target: https://codeclimate.com/github/dhilipsiva/hostscli
     :alt: Issue Count
+
 .. |say-thanks| image:: https://img.shields.io/badge/saythanks.io-%E2%98%BC-1EAEDB.svg
     :target: https://saythanks.io/to/dhilipsiva
     :alt: Say thanks :)
 
 .. end-badges
-
-
 
 .. toctree::
    :maxdepth: 2
