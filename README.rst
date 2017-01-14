@@ -87,9 +87,14 @@ Badges
 .. end-badges
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 2
+    :caption: Contents:
 
+.. automodule:: hostscli
+.. automodule:: hostscli.cli
+.. automodule:: hostscli.utils
+.. automodule:: hostscli.errors
+.. automodule:: hostscli.constants
 
 
 Indices and tables
@@ -137,7 +142,7 @@ sudo hostscli unblock_all -i facebook,youtube  # To ignore some sites when unblo
 
 
 More websites?
-=============
+==============
 
 If you need to add more websites, just create a ``<website>.py`` file in `hostscli/websites/ <https://github.com/dhilipsiva/hostscli/tree/master/hostscli/websites>`_ directory with list of domains declared as variable `DOMAINS`.
 Please look at `hostscli/websites/facebook.py <https://github.com/dhilipsiva/hostscli/blob/master/hostscli/websites/facebook.py>`_ file for reference

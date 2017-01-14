@@ -10,6 +10,10 @@
 File name: cli.py
 Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2016-12-28
+
+.. autofunction:: cli
+.. autofunction:: websites
+.. autofunction:: block
 """
 
 from click import echo, group, argument, option
