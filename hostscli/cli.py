@@ -9,7 +9,8 @@
 """
 List Supported Websites:
 ========================
-
+List all websites
+::
     $ hostscli websites
 
 
@@ -17,9 +18,11 @@ Block Websites
 ==============
 
 To block facebook:
+::
     $ sudo hostscli block facebook
 
 To block facebook & youtube:
+::
     $ sudo hostscli block facebook,youtube
 
 
@@ -27,9 +30,11 @@ Unblock Websites
 ================
 
 To unblock facebook:
+::
     $ sudo hostscli unblock facebook
 
 To unblock facebook & youtube:
+::
     $ sudo hostscli unblock facebook,youtube
 
 
@@ -37,9 +42,11 @@ Block All supported Websites
 ============================
 
 Block all available
+::
     $ sudo hostscli block_all
 
 Use `--ignore` ot `-i` to ignore websites while blocking.
+::
     $ sudo hostscli block_all -i facebook,google
 
 
@@ -47,10 +54,13 @@ Unblock All supported Websites
 ==============================
 
 Ubnlock all supported
+::
     $ sudo hostscli unblock_all
 
 Use `--ignore` ot `-i` to ignore websites while ubblocking.
+::
     $ sudo hostscli unblock_all -i facebook,google
+
 """
 
 from click import echo, group, argument, option
