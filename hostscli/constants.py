@@ -37,6 +37,7 @@ ROOT_ERROR = """
 Please run the last command again with sudo
 
 """
+IGNORE_WEBSITES = ["__pycache__", "__init__.py", "__init__.pyc"]
 
 
 # TEST CONSTANTS

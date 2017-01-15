@@ -16,7 +16,7 @@ from os import listdir, access, W_OK
 
 from hostscli.errors import WebsiteImportError, SudoRequiredError
 from hostscli.constants import HOSTS_FILE, FORMAT, WEBSITES_PACKAGE, \
-    IMPORT_ERROR, ROOT_ERROR
+    IMPORT_ERROR, ROOT_ERROR, IGNORE_WEBSITES
 
 
 def hosts_write_access(f):
@@ -37,11 +37,12 @@ def get_websites():
     Get a list of available websites
     """
     websites_path = import_module(WEBSITES_PACKAGE)
-    websites_path = websites_path.__file__.replace("__init__.py", "")
+    websites_path = websites_path.__file__.split("__init__")[0]
     websites = listdir(websites_path)
-    websites.remove('__pycache__')
-    websites.remove('__init__.py')
-    return [website[:-3] for website in websites]
+    for ignore_website in IGNORE_WEBSITES:
+        if ignore_website in websites:
+            websites.remove(ignore_website)
+    return list(set([website.split(".")[0] for website in websites]))
 
 
 def get_lines(website):
