@@ -1,7 +1,7 @@
 HostsCLI Docs
 =============
 
-A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily extendable.
+A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily extendable. Also block Ads, Tracking & Malware sites.
 
 
 Links
@@ -92,3 +92,19 @@ More websites?
 
 If you need to add more websites, just create a ``<website>.py`` file in `hostscli/websites/ <https://github.com/dhilipsiva/hostscli/tree/master/hostscli/websites>`_ directory with list of domains declared as variable `DOMAINS`.
 Please look at `hostscli/websites/facebook.py <https://github.com/dhilipsiva/hostscli/blob/master/hostscli/websites/facebook.py>`_ file for reference
+
+
+Credits
+=======
+
+Here are some of the list where I borrowed from the following lists:
+
+https://github.com/jmdugan/blocklists
+
+http://www.malwaredomainlist.com/hostslist/hosts.txt
+
+http://winhelp2002.mvps.org/hosts.txt
+
+http://someonewhocares.org/hosts/hosts
+
+http://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&mimetype=plaintext
