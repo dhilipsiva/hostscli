@@ -14,11 +14,24 @@ Date created: 2016-12-28
 
 from setuptools import setup, find_packages
 
+long_description = """
+hostscli
+========
+
+A CLI tool to block / unblock websites using /etc/hosts. Super simple
+and easily extendable.
+
+DOCS: https://hostscli.readthedocs.io/
+SOURCE: https://github.com/dhilipsiva/hostscli
+
+"""
+
 setup(
     name='hostscli',
     version='1.0.4',
     description=(
         "hostscli is a CLI tool to block / unblock websites using /etc/hosts"),
+    long_description=long_description,
     url='https://github.com/dhilipsiva/hostscli',
     author='dhilipsiva',
     author_email='dhilipsiva@gmail.com',

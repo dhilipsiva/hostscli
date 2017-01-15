@@ -4,4 +4,3 @@ flake8==3.2.1
 codeclimate-test-reporter
 coverage
 codecov
-sphinx-pypi-upload

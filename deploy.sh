@@ -9,11 +9,8 @@
 echo "Deploying!"
 
 rm -rf dist/
-make html
 bumpversion patch
 python setup.py sdist
-python setup.py build_sphinx
 twine upload dist/*
-python setup.py upload_sphinx
 git push
 git push --tags
