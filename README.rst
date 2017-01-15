@@ -86,6 +86,25 @@ Badges
     :undoc-members:
     :show-inheritance:
 
+Special Lists
+=============
+
+I have compiles few special lists from various sources to block Ads, Tracking & Disturbing sites.
+
+All the website list that starts with `list_` is a special list. So far, I have these lists:
+
+1. list_ads -> Domains of known ad servers
+
+2. list_malwares -> Domins that potentially have malwares
+
+3. list_misc -> Sites that may have offensive / disturbing content.
+
+To Block / Ubnlock these lists like you block other websites:
+
+::
+    $ sudo hostscli block list_ads
+
+
 
 More websites?
 ==============
