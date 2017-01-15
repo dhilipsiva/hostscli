@@ -29,7 +29,7 @@ SOURCE: https://github.com/dhilipsiva/hostscli
 
 setup(
     name='hostscli',
-    version='1.1.1',
+    version='1.1.2',
     description=(
         "hostscli is a CLI tool to block / unblock websites using /etc/hosts"),
     long_description=long_description,
