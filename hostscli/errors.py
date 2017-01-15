@@ -7,9 +7,7 @@
 #
 
 """
-File name: errors.py
-Author: dhilipsiva <dhilipsiva@gmail.com>
-Date created: 2016-12-29
+Some custom utility functions that we use
 """
 
 
@@ -21,11 +19,12 @@ class HostsCLIException(Exception):
 
 class WebsiteImportError(HostsCLIException):
     """
-    No Domain list found for website
+    An error to raise when no Domain list found for given website
     """
 
 
 class SudoRequiredError(HostsCLIException):
     """
+    An error raised when the given hosts files is not writable.
     "sudo" permissions are required to run this command.
     """

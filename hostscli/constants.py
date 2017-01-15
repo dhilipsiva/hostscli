@@ -18,9 +18,6 @@ FORMAT = '127.0.0.1 %s\n'
 WEBSITES_PACKAGE = 'hostscli.websites'
 HOSTS_FILE = environ.get('HOSTS_FILE', '/etc/hosts')
 
-print("~" * 100)
-print(HOSTS_FILE)
-
 IMPORT_ERROR = """
 
 No Domain list found for website: %s

@@ -87,58 +87,13 @@ Badges
 .. end-badges
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: Contents:
 
 .. automodule:: hostscli
-.. automodule:: hostscli.cli
-.. automodule:: hostscli.utils
-.. automodule:: hostscli.errors
-.. automodule:: hostscli.constants
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-
-Installation
-============
-
-    pip install -U hostscli
-
-
-Usage
-=====
-
-**Please note that we require `sudo` permissions to change `/etc/hosts` file**
-
-To block ``facebook``:
-
-``sudo hostscli block facebook
-sudo hostscli block facebook,youtube  # To block multiple sites``
-
-To unblock ``facebook``:
-
-``sudo hostscli unblock facebook
-sudo hostscli unblock facebook,youtube  # To unblock multiple sites``
-
-To list supported websites:
-
-``hostscli websites``
-
-To Block all supported websites:
-
-``sudo hostscli block_all
-sudo hostscli block_all -i facebook,youtube  # To ignore some sites when blocking``
-
-To Unblock all supported websites:
-
-``sudo hostscli unblock_all
-sudo hostscli unblock_all -i facebook,youtube  # To ignore some sites when unblocking``
+    :members:
+    :undoc-members:
+    :show-inheritance:
 
 
 More websites?

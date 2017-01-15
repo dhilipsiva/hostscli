@@ -7,9 +7,7 @@
 #
 
 """
-File name: utils.py
-Author: dhilipsiva <dhilipsiva@gmail.com>
-Date created: 2016-12-29
+Some utility functions that gets our work done
 """
 
 from functools import wraps
@@ -22,6 +20,10 @@ from hostscli.constants import HOSTS_FILE, FORMAT, WEBSITES_PACKAGE, \
 
 
 def hosts_write_access(f):
+    """
+    A Decorator to check if the given hosts file is writeable or not.
+    If not writeable, it raises a `SudoRequiredError`.
+    """
     @wraps(f)
     def wrapper(website, hosts_file=HOSTS_FILE):
         if not access(hosts_file, W_OK):
@@ -31,6 +33,9 @@ def hosts_write_access(f):
 
 
 def get_websites():
+    """
+    Get a list of available websites
+    """
     websites_path = import_module(WEBSITES_PACKAGE)
     websites_path = websites_path.__file__.replace("__init__.py", "")
     websites = listdir(websites_path)
@@ -40,6 +45,12 @@ def get_websites():
 
 
 def get_lines(website):
+    """
+    Get a list of lines of a specific website
+    to append to / remove from the hosts files
+
+    raise `WebsiteImportError` if a website is not available
+    """
     website = website.lower()
     try:
         module = import_module('%s.%s' % (WEBSITES_PACKAGE, website))
@@ -50,6 +61,9 @@ def get_lines(website):
 
 @hosts_write_access
 def block(website, hosts_file):
+    """
+    Add entries into the host file to block specific websites
+    """
     target_lines = get_lines(website)
     with open(hosts_file, 'a') as hosts_file:
         for target_line in target_lines:
@@ -59,6 +73,9 @@ def block(website, hosts_file):
 
 @hosts_write_access
 def unblock(website, hosts_file):
+    """
+    Remove entries from the host file to unblock specific websites
+    """
     target_lines = get_lines(website)
     input_lines = open(hosts_file, "r").readlines()
     with open(hosts_file, "w") as hosts_file:

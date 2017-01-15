@@ -7,13 +7,45 @@
 #
 
 """
-File name: cli.py
-Author: dhilipsiva <dhilipsiva@gmail.com>
-Date created: 2016-12-28
 
-.. autofunction:: cli
-.. autofunction:: websites
-.. autofunction:: block
+Block Websites
+==============
+
+To block facebook:
+    $ hostscli block facebook
+
+To block facebook & youtube:
+    $ hostscli block facebook,youtube
+
+
+Unblock Websites
+================
+
+To unblock facebook:
+    $ hostscli unblock facebook
+
+To unblock facebook & youtube:
+    $ hostscli unblock facebook,youtube
+
+
+Block All supported Websites
+============================
+
+Block all available
+    $ hostscli block_all
+
+Use `--ignore` ot `-i` to ignore websites while blocking.
+    $ hostscli block_all -i facebook,google
+
+
+Unblock All supported Websites
+==============================
+
+Ubnlock all supported
+    $ hostscli unblock_all
+
+Use `--ignore` ot `-i` to ignore websites while ubblocking.
+    $ hostscli unblock_all -i facebook,google
 """
 
 from click import echo, group, argument, option
@@ -31,7 +63,7 @@ def cli():
 @cli.command()
 def websites():
     """
-    List all availbale websites
+    List all available websites
     """
     echo("Available Websites: \n")
     websites = get_websites()
@@ -43,15 +75,7 @@ def websites():
 @argument('websites')
 def block(websites):
     """
-    Unblock specific website(s)
-
-    \b
-    To block facebook:
-    $ hostscli block facebook
-
-    \b
-    To block facebook & youtube:
-    $ hostscli block facebook,youtube
+    Block specific website(s)
     """
     for website in websites.split(","):
         _block(website)
@@ -63,14 +87,6 @@ def block(websites):
 def unblock(websites):
     """
     Unblock specific website(s)
-
-    \b
-    To unblock facebook:
-    $ hostscli unblock facebook
-
-    \b
-    To unblock facebook & youtube:
-    $ hostscli unblock facebook,youtube
     """
     for website in websites.split(","):
         _unblock(website)
@@ -81,13 +97,7 @@ def unblock(websites):
 @option('--ignore', '-i', default="", help='Ignore websites while blocking')
 def block_all(ignore):
     """
-    \b
-    Block all available websites.
-    $ hostscli block_all
-
-    \b
-    use `--ignore` ot `-i` to ignore websites.
-    $ hostscli block_all -i facebook,google
+    Block all available websites
     """
     websites = get_websites()
     ignore_websites = ignore.split(",")
@@ -100,13 +110,7 @@ def block_all(ignore):
 @option('--ignore', '-i', default="", help='Ignore websites while unblocking')
 def unblock_all(ignore):
     """
-    \b
-    Unblock all available websites.
-    $ hostscli unblock_all
-
-    \b
-    use `--ignore` ot `-i` to ignore websites.
-    $ hostscli unblock_all -i facebook,google
+    Unblock all available websites
     """
     websites = get_websites()
     ignore_websites = ignore.split(",")
