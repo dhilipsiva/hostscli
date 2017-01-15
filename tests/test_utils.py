@@ -12,45 +12,42 @@ Author: dhilipsiva <dhilipsiva@gmail.com>
 Date created: 2017-01-08
 """
 
+from unittest import TestCase
+
 from hostscli.constants import HOSTS_FILE
-from hostscli.errors import WebsiteImportError
 from hostscli.constants import TEST_WEBSITE, TEST_LINE
+from hostscli.errors import WebsiteImportError, SudoRequiredError
 from hostscli.utils import get_websites, get_lines, block, unblock
 
 
-def test_get_websites():
+class TestUtils(TestCase):
     """
-    Test listing supported websites
+    Test utils.py
     """
-    websites = get_websites()
-    assert TEST_WEBSITE in websites
 
+    def test_get_websites(self):
+        """
+        Test listing supported websites
+        """
+        websites = get_websites()
+        self.assertTrue(TEST_WEBSITE in websites)
 
-def test_get_lines():
-    """
-    Test if its getting domains from file
-    """
-    lines = get_lines(TEST_WEBSITE)
-    assert TEST_LINE in lines
+    def test_get_lines(self):
+        """
+        Test if its getting domains from file
+        """
+        lines = get_lines(TEST_WEBSITE)
+        self.assertTrue(TEST_LINE in lines)
+        with self.assertRaises(WebsiteImportError):
+            get_lines('a_website_that_does_not_exist')
 
-
-def test_get_lines_throws_exception():
-    """
-    get_lines should throw an exception when a website is not found
-    """
-    try:
-        get_lines('a_website_that_does_not_exist')
-    except WebsiteImportError:
-        assert True
-        return
-    assert False
-
-
-def test_block_unblock():
-    """
-    Test blocking and unblocking websites
-    """
-    block(TEST_WEBSITE)
-    assert TEST_LINE in open(HOSTS_FILE).read()
-    unblock(TEST_WEBSITE)
-    assert TEST_LINE not in open(HOSTS_FILE).read()
+    def test_block_unblock(self):
+        """
+        Test blocking and unblocking websites
+        """
+        block(TEST_WEBSITE)
+        self.assertTrue(TEST_LINE in open(HOSTS_FILE).read())
+        unblock(TEST_WEBSITE)
+        self.assertFalse(TEST_LINE in open(HOSTS_FILE).read())
+        with self.assertRaises(SudoRequiredError):
+            block(TEST_WEBSITE, '/etc/hosts')

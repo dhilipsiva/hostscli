@@ -21,12 +21,12 @@ from hostscli.constants import HOSTS_FILE, FORMAT, WEBSITES_PACKAGE, \
     IMPORT_ERROR, ROOT_ERROR
 
 
-def sudo_required(f):
+def hosts_write_access(f):
     @wraps(f)
-    def wrapper(website):
-        if not access(HOSTS_FILE, W_OK):
+    def wrapper(website, hosts_file=HOSTS_FILE):
+        if not access(hosts_file, W_OK):
             raise SudoRequiredError(ROOT_ERROR)
-        return f(website)
+        return f(website, hosts_file)
     return wrapper
 
 
@@ -48,20 +48,20 @@ def get_lines(website):
         raise WebsiteImportError(IMPORT_ERROR % website)
 
 
-@sudo_required
-def block(website):
+@hosts_write_access
+def block(website, hosts_file):
     target_lines = get_lines(website)
-    with open(HOSTS_FILE, 'a') as hosts_file:
+    with open(hosts_file, 'a') as hosts_file:
         for target_line in target_lines:
             hosts_file.write(target_line)
     return target_line
 
 
-@sudo_required
-def unblock(website):
+@hosts_write_access
+def unblock(website, hosts_file):
     target_lines = get_lines(website)
-    input_lines = open(HOSTS_FILE, "r").readlines()
-    with open(HOSTS_FILE, "w") as hosts_file:
+    input_lines = open(hosts_file, "r").readlines()
+    with open(hosts_file, "w") as hosts_file:
         for input_line in input_lines:
             if input_line not in target_lines:
                 hosts_file.write(input_line)
