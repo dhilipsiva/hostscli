@@ -22,6 +22,7 @@ A CLI tool to block / unblock websites using /etc/hosts. Super simple
 and easily extendable.
 
 DOCS: https://hostscli.readthedocs.io/
+
 SOURCE: https://github.com/dhilipsiva/hostscli
 
 """
