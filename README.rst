@@ -86,10 +86,6 @@ Badges
 
 .. end-badges
 
-.. toctree::
-    :maxdepth: 3
-    :caption: Contents:
-
 .. automodule:: hostscli
     :members:
     :undoc-members:
