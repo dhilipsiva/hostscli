@@ -16,7 +16,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='hostscli',
-    version='1.0.3',
+    version='1.0.4',
     description=(
         "hostscli is a CLI tool to block / unblock websites using /etc/hosts"),
     url='https://github.com/dhilipsiva/hostscli',
