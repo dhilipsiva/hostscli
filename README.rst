@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to HostsCLI's documentation!
-====================================
+HostsCLI Docs
+=============
 
 A CLI tool to block / unblock websites using /etc/hosts. Super simple and easily extendable.
 
