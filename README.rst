@@ -81,13 +81,18 @@ Badges
 
 .. end-badges
 
+
+Docs & Reference
+----------------
+
 .. automodule:: hostscli
     :members:
     :undoc-members:
     :show-inheritance:
 
+
 Special Lists
-=============
+-------------
 
 I have compiles few special lists from various sources to block Ads, Tracking & Disturbing sites.
 
@@ -101,20 +106,20 @@ All the website list that starts with `list_` is a special list. So far, I have 
 
 To Block / Ubnlock these lists like you block other websites:
 
-::
+:: highlight
     $ sudo hostscli block list_ads
 
 
 
 More websites?
-==============
+--------------
 
 If you need to add more websites, just create a ``<website>.py`` file in `hostscli/websites/ <https://github.com/dhilipsiva/hostscli/tree/master/hostscli/websites>`_ directory with list of domains declared as variable `DOMAINS`.
 Please look at `hostscli/websites/facebook.py <https://github.com/dhilipsiva/hostscli/blob/master/hostscli/websites/facebook.py>`_ file for reference
 
 
 Credits
-=======
+-------
 
 Here are some of the list where I borrowed from the following lists:
 
