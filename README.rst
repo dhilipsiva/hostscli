@@ -101,7 +101,7 @@ Please look at `hostscli/websites/facebook.py <https://github.com/dhilipsiva/hos
 Credits
 -------
 
-Here are some of the list where I borrowed from the following lists:
+Here are some of the list where I borrowed domains from:
 
 https://github.com/jmdugan/blocklists
 

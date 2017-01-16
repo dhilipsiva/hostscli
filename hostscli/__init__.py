@@ -54,9 +54,12 @@ Custom Errors
 Special Lists
 =============
 
-I have compiles few special lists from various sources to block Ads, Tracking & Disturbing sites.
+I have compiled few special lists from various sources to block Ads,
+Tracking & Disturbing sites.
 
-All the website list that starts with `list_` is a special list. So far, I have these lists:
+All the website list that starts with `list_` is a special list.
+
+So far, I have these lists:
 
 1. list_ads -> Domains of known ad servers
 
