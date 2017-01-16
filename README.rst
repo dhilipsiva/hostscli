@@ -104,9 +104,8 @@ All the website list that starts with `list_` is a special list. So far, I have 
 
 3. list_misc -> Sites that may have offensive / disturbing content.
 
-To Block / Ubnlock these lists like you block other websites:
-
-:: highlight
+These lists can be blocked / unblocked like you do with other websites
+::
     $ sudo hostscli block list_ads
 
 
