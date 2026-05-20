@@ -1,5 +1,5 @@
 click==6.7
-pytest==3.0.5
+pytest==9.0.3
 flake8==3.2.1
 codeclimate-test-reporter
 coverage
